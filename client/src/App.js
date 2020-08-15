@@ -128,6 +128,42 @@ function App() {
   //Async Await examples
   ////////////////////////////////////////
 
+  const random = () => {
+    return Promise.resolve(Math.random());
+  }
+
+  //Bad Code, using .then too much
+  /*
+    cont sumRandomAsyncNums = () => {
+       let first;
+       let second;
+       let third; 
+
+       return random()
+        .then( v =>{
+          first = v;
+          return random();
+        })
+        .then( v =>{
+          second = v;
+          return random();
+        })
+        .then( v =>{
+          third = v;
+          return random();
+        })
+    }
+  */
+  //Good Code
+  // 6.0 using async
+  const sumRandomAsyncNums = async() => {
+    let first = await random();
+    let second = await random();
+    let third = await random(); 
+
+    return (`Result ${first + second + third}`);
+  }
+
 
 
 
@@ -142,6 +178,7 @@ function App() {
       {/** 5.0 **/ }{(console.log(total))}
       {/** 5.1 **/ }{(console.log(withTax))}
       {/** 5.2 **/ }{(console.log(highValue))}
+      {/** 6.0 **/ }{(console.log(sumRandomAsyncNums()))}
       <h1>hello</h1>
     
     </div>
