@@ -1,0 +1,19 @@
+{
+  "name": "js-tips",
+  "version": "1.0.0",
+  "description": "project that has js coding tips / best practice when coding",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsawwassen/js-tips.git"
+  },
+  "author": "Mitchell Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsawwassen/js-tips/issues"
+  },
+  "homepage": "https://github.com/Tsawwassen/js-tips#readme"
+}
