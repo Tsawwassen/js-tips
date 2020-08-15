@@ -51,8 +51,7 @@ function App() {
 
   let templaceLiteral = myAge`Mitchell is ${me.age}`;
 
-  // Spread Syntax
-  //  Merge objects together
+  // Spread Syntax - Merge objects together
 
   const pik = {name: 'Pikachu'};
   const stats = { hp: 40, attack: 50, defense: 45};
@@ -80,6 +79,39 @@ function App() {
   // Also, you can place a comma after the last element in the array and it will not give an error
 
 
+  //Loops
+  let orders = [4, 5, 6];
+
+  //Bad Code
+  /*
+  let total = 0;
+  let withTax = [];
+  let highValue = [];
+  for ( STANDARD LOOP ){
+
+    //Reduce
+    total += orders[i];
+
+    //Map
+    withTax.push(orders[i] * 1.1);
+
+    //Filter
+    if(orders[i] > 5){
+      highValue.push(orders[i]);
+    }
+  }
+  */
+
+  // Good Code
+  // 6.0 - Reduce takes total value, acc, and current value to sum up all elemets in an array
+  let total = orders.reduce((acc, cur) => acc + cur );
+
+  // 6.1 - Map will do something to every element in an array and return an array
+  let withTax = orders.map(v => v * 2);
+
+  //6.2 - Filter will check every element in an array and return a filtered array (not the best definition)
+  let highValue = orders.filter(v => v > 5);
+
   
 
 
@@ -93,6 +125,9 @@ function App() {
       {/** 4.0 **/ }{(console.log(templaceLiteral))}
       {/** 5.0 **/ }{(console.log(spreadSyntax))}
       {/** 5.1 **/ }{(console.log(list))}
+      {/** 6.0 **/ }{(console.log(total))}
+      {/** 6.1 **/ }{(console.log(withTax))}
+      {/** 6.2 **/ }{(console.log(highValue))}
       <h1>hello</h1>
     
     </div>
