@@ -14,4 +14,5 @@ Simple project working on JS tips
 	-- The goal of this weekend project is to get new tools / code styles, not a well structored project
 
 ## References
-	- JavaScript Pro Tips - Code This, NOT That, Fireship, 09/27/2018,  https://www.youtube.com/watch?v=Mus_vwhTCq0 
+	- "JavaScript Pro Tips - Code This, NOT That", Fireship, 09/27/2018,  https://www.youtube.com/watch?v=Mus_vwhTCq0 
+	- "The Async Await Episode I Promised", Fireship, 10/11/2018, https://www.youtube.com/watch?v=vn3tm0quoqE
