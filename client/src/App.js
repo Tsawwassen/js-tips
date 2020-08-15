@@ -42,8 +42,7 @@ function App() {
   //  Template Literals
   //4.0 - Use a function as a template when outputting text
 
-  let me = {name: "mitchell",
-            age: 29};
+  let me = {name: "mitchell", age: 29};
 
   function myAge (str, age){
     let ageIf = age > 10 ? 'old' : 'young';
@@ -51,6 +50,37 @@ function App() {
   }
 
   let templaceLiteral = myAge`Mitchell is ${me.age}`;
+
+  // Spread Syntax
+  //  Merge objects together
+
+  const pik = {name: 'Pikachu'};
+  const stats = { hp: 40, attack: 50, defense: 45};
+
+  //Bad Code
+  //  Creates an hp key on the pik object and assigns it the value of stats.hp
+  //  this would be 3 lines of code to add hp, attack, and defense to the pik object
+  //pik['hp'] = stats.hp
+
+  // 5.0 - Good Code
+  // The bad code is updating the original variable.
+  // We can merge the two variables together into a new variable
+  let spreadSyntax = {...pik, ...stats};
+
+  // The spread Syntax can also be used to add values to an array
+  let list = [ 1, 2, 3, 4];
+
+  //Bad Code, one push per item added
+  // list.push(5)
+
+  //5.1 - Good Code
+  list = [...list, 5, 6, 7,];
+
+  //Note, you can place the original array (...list in the example above) in the start, middle, or end of the 'merge' depending how you want the new list to be ordered
+  // Also, you can place a comma after the last element in the array and it will not give an error
+
+
+  
 
 
 
@@ -61,6 +91,8 @@ function App() {
       {/** 2.0 **/ }{(console.table([foo, bar, baz]))}
       {/** 3.2 **/ }{(console.log(feed(turtle)))}
       {/** 4.0 **/ }{(console.log(templaceLiteral))}
+      {/** 5.0 **/ }{(console.log(spreadSyntax))}
+      {/** 5.1 **/ }{(console.log(list))}
       <h1>hello</h1>
     
     </div>
