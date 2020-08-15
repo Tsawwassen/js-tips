@@ -38,7 +38,19 @@ function App() {
     const {name, diet} = animal;
     return `Feed ${name} eats ${diet} easy mode`;
   }
-  
+
+  //  Template Literals
+  //4.0 - Use a function as a template when outputting text
+
+  let me = {name: "mitchell",
+            age: 29};
+
+  function myAge (str, age){
+    let ageIf = age > 10 ? 'old' : 'young';
+    return `${str[0]}${ageIf} at ${age}`;
+  }
+
+  let templaceLiteral = myAge`Mitchell is ${me.age}`;
 
 
 
@@ -48,6 +60,7 @@ function App() {
       {/** 1.0 **/ }{(console.log({foo, bar, baz}))} 
       {/** 2.0 **/ }{(console.table([foo, bar, baz]))}
       {/** 3.2 **/ }{(console.log(feed(turtle)))}
+      {/** 4.0 **/ }{(console.log(templaceLiteral))}
       <h1>hello</h1>
     
     </div>
