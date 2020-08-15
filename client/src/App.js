@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import fetch from 'node-fetch';
 
 function App() {
 
@@ -163,6 +164,9 @@ function App() {
 
     return (`Result ${first + second + third}`);
   }
+
+
+
 
 
 
