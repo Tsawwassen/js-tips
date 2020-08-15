@@ -16,6 +16,8 @@ function App() {
 
   const turtle ={ name: 'bob', legs: 4, diet: 'food'};
 
+  //  Object Destructoring
+
   // 3.0 - The below code is not very clean because we are repeating animal a lot
   //If the animal object was more complicated, there would be even more animal typed out
   /*
@@ -26,9 +28,15 @@ function App() {
 
   // 3.1 - In this code, we only define the object keys that the function needs, so when we call the function, we only need to pass in the object that has the keys, 
   // and the function will extract those key values for us.
-  
+  /*
   function feed ({name, diet}){
     return `Feed ${name} eats ${diet}`;
+  }
+  */
+  //3.2 - Because having {} in the defined function variables is not ideal, you can extract the needed values into a local variable
+  function feed(animal){
+    const {name, diet} = animal;
+    return `Feed ${name} eats ${diet} easy mode`;
   }
   
 
@@ -39,7 +47,7 @@ function App() {
     <div className="App">
       {/** 1.0 **/ }{(console.log({foo, bar, baz}))} 
       {/** 2.0 **/ }{(console.table([foo, bar, baz]))}
-      {/** 3.1 **/ }{(console.log(feed(turtle)))}
+      {/** 3.2 **/ }{(console.log(feed(turtle)))}
       <h1>hello</h1>
     
     </div>
